@@ -1,7 +1,7 @@
+require 'rspec/matchers' 
 module CustomMatchers
-  rspec = defined?(RSpec) ? RSpec : Spec
 
-  rspec::Matchers.define :contain_with_wildcards do |expected_string|
+  RSpec::Matchers.define :contain_with_wildcards do |expected_string|
     match do |field_value|
       @field_value = field_value.to_s
       @expected_string = expected_string
@@ -19,7 +19,7 @@ module CustomMatchers
     end
   end
 
-  rspec::Matchers.define :be_sorted do
+  RSpec::Matchers.define :be_sorted do
     match do |array|
       sort_method = defined?(array.natural_sort) ? :natural_sort : :sort
       array == array.send(sort_method)

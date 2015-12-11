@@ -1,5 +1,5 @@
 # coding: UTF-8
- 
+require 'rspec/matchers' 
 require 'spreewald_support/tolerance_for_selenium_sync_issues'
 
 module TableStepsHelper
@@ -32,9 +32,7 @@ module TableStepsHelper
 
   end
 
-  rspec = defined?(RSpec) ? RSpec : Spec
-
-  rspec::Matchers.define :contain_table do |*args|
+  RSpec::Matchers.define :contain_table do |*args|
     match do |tables|
       @last_unmatched_row = nil
       @extra_rows = nil

@@ -1,5 +1,5 @@
 # coding: UTF-8
-
+require 'action_mailer'
 require 'spreewald_support/mail_finder'
 
 Before do

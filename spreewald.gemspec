@@ -19,4 +19,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency('cucumber')
   gem.add_dependency('cucumber_priority')
+  gem.add_dependency('rspec', '> 2.0.0')
 end
