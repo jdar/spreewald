@@ -22,6 +22,7 @@ Or install it yourself as:
 
 Steps are grouped into a number of categories. You can pick and choose single categories by putting something like
 
+    require 'spreewald'
     require 'spreewald/email_steps'
 
 into either your `support/env.rb` or a `step_defitions/spreewald_steps.rb`.
